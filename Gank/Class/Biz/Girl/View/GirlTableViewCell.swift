@@ -25,6 +25,7 @@ class GirlTableViewCell: UITableViewCell, CellRegister {
             descLabel.text = art.desc
             
             guard let imageUrl = art.cover else { return }
+            girlImageView.kf.indicatorType = .activity
             girlImageView.kf.setImage(with: URL(string: imageUrl))
         }
     }

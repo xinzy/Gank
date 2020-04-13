@@ -90,7 +90,8 @@ extension GirlViewController: UITableViewDataSource, UITableViewDelegate {
         let article = mData[indexPath.row]
         let controller = GirlShowViewController()
         controller.girlArticle = article
-        navigationController?.pushViewController(controller, animated: true)
+        controller.modalPresentationStyle = .fullScreen
+        present(controller, animated: true, completion: nil)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
